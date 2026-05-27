@@ -1,289 +1,92 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "authorship_tag": "ABX9TyOCjjbIIQZ/nS0eQREIRYya",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/blackspadeA/-Internship-Assignment/blob/main/Internship_Python_Assignment_2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "execution_count": 1,
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "pvvfSnLVPdpZ",
-        "outputId": "ef30d860-0537-44b2-eb73-dfcef17b9dd4"
-      },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Enter electricity units consumed: 100\n",
-            "Total Bill = ₹500\n"
-          ]
-        }
-      ],
-      "source": [
-        "units = int(input(\"Enter electricity units consumed: \"))\n",
-        "bill = 0\n",
-        "\n",
-        "if units <= 100:\n",
-        "    bill = units * 5\n",
-        "elif units <= 200:\n",
-        "    bill = (100 * 5) + ((units - 100) * 7)\n",
-        "else:\n",
-        "    bill = (100 * 5) + (100 * 7) + ((units - 200) * 10)\n",
-        "\n",
-        "print(f\"Total Bill = ₹{bill}\")"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "number = int(input(\"Enter number: \"))\n",
-        "if number % 2 == 0:\n",
-        "    print(\"Even\")\n",
-        "else:\n",
-        "    print(\"Odd\")"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "GVLCNUyAPuQD",
-        "outputId": "8d3efe78-8851-442c-9e6c-4828d0579814"
-      },
-      "execution_count": 2,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Enter number: 2\n",
-            "Even\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "number = int(input(\"Enter number: \"))\n",
-        "if number % 2 == 0:\n",
-        "    print(\"Even\")\n",
-        "else:\n",
-        "    print(\"Odd\")"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "r3kFBDrAQhfb",
-        "outputId": "6db152d0-a21c-41ab-d98f-f46c9af5a3f0"
-      },
-      "execution_count": 6,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Enter number: 3\n",
-            "Odd\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "num1 = float(input(\"Enter first number: \"))\n",
-        "num2 = float(input(\"Enter second number: \"))\n",
-        "num3 = float(input(\"Enter third number: \"))\n",
-        "if (num1 >= num2) and (num1 >= num3):\n",
-        "    largest = num1\n",
-        "elif (num2 >= num1) and (num2 >= num3):\n",
-        "    largest = num2\n",
-        "else:\n",
-        "    largest = num3\n",
-        "print(f\"{largest} is the largest number\")"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "-uxXTtTxQQL6",
-        "outputId": "395559f7-4f29-4f9f-c771-e64578f1d2e0"
-      },
-      "execution_count": 3,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Enter first number: 66\n",
-            "Enter second number: 22\n",
-            "Enter third number: 11\n",
-            "66.0 is the largest number\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "year = int(input(\"Enter a year: \"))\n",
-        "\n",
-        "if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):\n",
-        "    print(\"Leap Year\")\n",
-        "else:\n",
-        "    print(\"Not a Leap Year\")"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "xrlbegUrQYEV",
-        "outputId": "88756160-5f37-4114-d981-f33d3a86e250"
-      },
-      "execution_count": 4,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Enter a year: 1996\n",
-            "Leap Year\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "year = int(input(\"Enter a year: \"))\n",
-        "\n",
-        "if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):\n",
-        "    print(\"Leap Year\")\n",
-        "else:\n",
-        "    print(\"Not a Leap Year\")"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "c5hKgRg8Qeck",
-        "outputId": "7ac75cac-1ce9-4952-a29d-f2fb2804be13"
-      },
-      "execution_count": 5,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Enter a year: 2026\n",
-            "Not a Leap Year\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "correct_username = \"admin\"\n",
-        "correct_password = \"python123\"\n",
-        "\n",
-        "username = input(\"Enter Username: \")\n",
-        "password = input(\"Enter Password: \")\n",
-        "\n",
-        "if username == correct_username and password == correct_password:\n",
-        "    print(\"Login Successful\")\n",
-        "elif username != correct_username and password == correct_password:\n",
-        "    print(\"Invalid Username\")\n",
-        "elif username == correct_username and password != correct_password:\n",
-        "    print(\"Invalid Password\")\n",
-        "else:\n",
-        "    print(\"Invalid Credentials\")"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "JwG4PxmRQvOv",
-        "outputId": "cde2ec1c-9f3c-43c9-cd50-935bd8eb3ff8"
-      },
-      "execution_count": 7,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Enter Username: anu\n",
-            "Enter Password: poython123\n",
-            "Invalid Credentials\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "correct_username = \"admin\"\n",
-        "correct_password = \"python123\"\n",
-        "\n",
-        "username = input(\"Enter Username: \")\n",
-        "password = input(\"Enter Password: \")\n",
-        "\n",
-        "if username == correct_username and password == correct_password:\n",
-        "    print(\"Login Successful\")\n",
-        "elif username != correct_username and password == correct_password:\n",
-        "    print(\"Invalid Username\")\n",
-        "elif username == correct_username and password != correct_password:\n",
-        "    print(\"Invalid Password\")\n",
-        "else:\n",
-        "    print(\"Invalid Credentials\")"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "-ZNXUtf4Q7xF",
-        "outputId": "58096aa9-e1c5-4fc7-a312-d155963ff572"
-      },
-      "execution_count": 8,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Enter Username: admin\n",
-            "Enter Password: python123\n",
-            "Login Successful\n"
-          ]
-        }
-      ]
-    }
-  ]
-}
+Q1)
+units = int(input("Enter electricity units consumed: "))
+bill = 0
+
+if units <= 100:
+    bill = units * 5
+elif units <= 200:
+    bill = (100 * 5) + ((units - 100) * 7)
+else:
+    bill = (100 * 5) + (100 * 7) + ((units - 200) * 10)
+
+print(f"Total Bill = ₹{bill}")
+______________________________________________________________________
+Output:
+Enter electricity units consumed: 100
+Total Bill = ₹500
+======================================================================
+Q2)
+number = int(input("Enter number: "))
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+_______________________________________________________________________
+Output 1:
+Enter number: 2
+Even
+______________________________________________________________________
+Output 2:
+Enter number: 3
+Odd
+=======================================================================
+Q3)
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+num3 = float(input("Enter third number: "))
+if (num1 >= num2) and (num1 >= num3):
+    largest = num1
+elif (num2 >= num1) and (num2 >= num3):
+    largest = num2
+else:
+    largest = num3
+print(f"{largest} is the largest number")
+______________________________________________________________________
+Output :
+Enter first number: 66
+Enter second number: 22
+Enter third number: 11
+66.0 is the largest number
+=======================================================================
+Q4)
+year = int(input("Enter a year: "))
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap Year")
+else:
+    print("Not a Leap Year")
+______________________________________________________________________
+Output 1:
+Enter a year: 1996
+Leap Year
+______________________________________________________________________
+Output 2:
+Enter a year: 2026
+Not a Leap Year
+========================================================================
+Q5)
+correct_username = "admin"
+correct_password = "python123"
+
+username = input("Enter Username: ")
+password = input("Enter Password: ")
+
+if username == correct_username and password == correct_password:
+    print("Login Successful")
+elif username != correct_username and password == correct_password:
+    print("Invalid Username")
+elif username == correct_username and password != correct_password:
+    print("Invalid Password")
+else:
+    print("Invalid Credentials")
+_______________________________________________________________________
+Output 1:
+Enter Username: anu
+Enter Password: poython123
+Invalid Credentials
+________________________________________________________________________
+Output 2:
+Enter Username: admin
+Enter Password: python123
+Login Successful
+========================================================================
